@@ -1,67 +1,70 @@
-E-Commerce Website - MERN Stack
-Overview
-This is a full-stack e-commerce platform built with the MERN stack (MongoDB, Express.js, React, and Node.js). The project features a client-facing e-commerce store and an admin panel for managing products, orders, and users. The frontend is built with React using Vite for optimized performance.
+# 🛍️ Q-Mart - MERN E-Commerce Platform
 
+## 🌟 Overview
+A full-featured e-commerce solution built with:
+- **MongoDB** (Database)
+- **Express.js** (Backend framework)
+- **React.js** (Frontend with Vite)
+- **Node.js** (Runtime environment)
 
-Project Structure
-Copy
-ecommerce-website/
-├── client/          # Frontend React application (Vite)
-├── server/          # Backend Node.js/Express application
-├── .gitignore
-└── README.md
-Prerequisites
-Before running the project, ensure you have the following installed:
+## 🚀 Quick Start
 
-Node.js (v14 or higher)
+### Prerequisites
+- Node.js v14+
+- npm
+- MongoDB Atlas account
 
-npm (comes with Node.js)
-
-MongoDB Atlas account (for database)
-
-Setup Instructions
-Clone the repository
-
-git clone [https://github.com/praveengamini/q-mart]
-cd ecommerce-website
-Install dependencies for both client and server
-
-
+### Installation
+```bash
+git clone https://github.com/praveengamini/q-mart
+cd q-mart
 npm install
-cd client
-npm install
-cd ../server
-npm install
+cd client && npm install
+cd ../server && npm install
 cd ..
-Environment Variables Setup
 
-Create a .env file in the server directory with the following variables:
-
-Copy
+# Server Configuration
 PORT=5000
+
+# Database Configuration
 MONGODB_URI=your_mongodb_atlas_connection_string
-JWT_SECRET=your_jwt_secret_key
-Running the Application
 
+# Authentication Configuration
+JWT_SECRET=your_strong_jwt_secret_key
+JWT_EXPIRE=30d
+COOKIE_EXPIRE=30
+
+# Cloudinary Configuration
+CLOUDINARY_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+## 🚀 Run the Application
+
+### Frontend (client)
+```bash
+cd client
 npm run dev
-This command will start both the client (React) and server (Node.js) concurrently.
+# Runs on http://localhost:3000
+### Backend (sever)
+```bash
+cd server
+npm run dev
+# Runs on http://localhost:5000
 
-Admin Access
-By default, all new users are registered as normal users. To grant admin privileges:
+👑 Admin Access
+Access MongoDB Atlas
 
-Access your MongoDB Atlas cluster
+Go to users collection
 
-Navigate to the users collection
+Find user document
 
-Find the user you want to make admin
+Change role from "user" to "admin"
 
-Update the role field from user to admin
-
-Features
+✨ Features
 Client Side
-User registration and authentication
+User authentication (Login/Register)
 
-Product browsing and filtering
+Product browsing with filters
 
 Shopping cart functionality
 
@@ -70,41 +73,37 @@ Order placement and history
 User profile management
 
 Admin Panel
-Product management (CRUD operations)
+Full product management (CRUD)
 
-Order management
+Order processing system
 
 User management
 
-Sales analytics and reports
+Sales analytics dashboard
 
-Available Scripts
-In the project root directory, you can run:
+🛠️ Tech Stack
+Frontend:
 
-npm run server: Starts only the backend server
+React with Vite
 
-npm run client: Starts only the frontend client
-
-Technologies Used
-Frontend
-React.js (with Vite)
+Redux for state management
 
 React Router
 
-Redux (for state management)
+Axios for API calls
 
-Axios (for API calls)
+Tailwind CSS
 
-Tailwind CSS (or your CSS framework)
+Backend:
 
-Backend
 Node.js
 
 Express.js
 
-MongoDB (with Mongoose ODM)
+Mongoose ODM
 
-JWT (for authentication)
+JWT Authentication
 
-Support
-For any issues or questions, please contact [praveegamini009@gmail.com].
+Cloudinary for image storage
+
+Nodemailer for emails
